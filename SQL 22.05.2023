@@ -1,0 +1,33 @@
+
+CREATE TABLE weather (
+  Num INTEGER PRIMARY KEY,
+  Day1 TEXT NOT NULL,
+  Dat TEXT NOT NULL,
+  Weather TEXT NOT NULL,
+  Temperature INTEGER NOT NULL
+);
+
+INSERT INTO weather VALUES (1,'Monday','15.05.2023','Sunny',26);
+INSERT INTO weather VALUES (2,'Tuesday','16.05.2023','Sunny',28);
+INSERT INTO weather VALUES (3,'Wednesday','17.05.2023','Sunny',29);
+INSERT INTO weather VALUES (4,'Thursday','18.05.2023','Sunny',30);
+INSERT INTO weather VALUES (5,'Friday','19.05.2023','Sunny',32);
+INSERT INTO weather VALUES (6,'Saturday','20.05.2023','Rainy',12);
+INSERT INTO weather VALUES (7,'Sunday','21.05.2023','Rainy',15);
+INSERT INTO weather VALUES (8,'Monday','22.05.2023','Sunny',18);
+INSERT INTO weather VALUES (9,'Tuesday','23.05.2023','Sunny',20);
+INSERT INTO weather VALUES (10,'Wednesday','24.05.2023','Sunny',25);
+INSERT INTO weather VALUES (11,'Thursday','25.05.2023','Sunny',28);
+INSERT INTO weather VALUES (12,'Friday','26.05.2023','Sunny',29);
+INSERT INTO weather VALUES (13, 'Saturday', '27.05.2023', 'Sunny', 35);
+INSERT INTO weather VALUES (14,'Sunday','28.05.2023','Sunny',48);
+
+
+
+/*SELECT * FROM weather where Weather = 'Rainy' AND Day1 = 'Tuesday';*/
+SELECT MIN(Temperature) FROM weather;
+SELECT MAX(Temperature) FROM weather;
+SELECT AVG(Temperature) FROM weather;
+SELECT COUNT(Weather) FROM weather WHERE weather = 'Rainy';
+DELETE FROM Weather where weather = 'Sunny';
+SELECT * FROM weather;
