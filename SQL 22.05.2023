@@ -31,3 +31,34 @@ SELECT AVG(Temperature) FROM weather;
 SELECT COUNT(Weather) FROM weather WHERE weather = 'Rainy';
 DELETE FROM Weather where weather = 'Sunny';
 SELECT * FROM weather;
+
+
+------------------------------------------------------------------------
+
+
+CREATE TABLE cto (
+  Num INTEGER PRIMARY KEY,
+  employee_id INTEGER NOT NULL,
+  first_name TEXT NOT NULL,
+  last_name TEXT NOT NULL,
+  customer_id INTEGER NOT NULL,
+  customer_name TEXT NOT NULL,
+  city TEXT NOT NULL
+);
+
+INSERT INTO cto VALUES (1,1,'Thomas (Neo)','Anderson',1,'Jewelry Store','London');
+INSERT INTO cto VALUES (2,1,'Thomas (Neo)','Anderson',2,'Bakery','London');
+INSERT INTO cto VALUES (3,1,'Thomas (Neo)','Anderson',3,'Cafe','London');
+INSERT INTO cto VALUES (4,1,'Thomas (Neo)','Anderson',4,'Restaurant','London');
+INSERT INTO cto VALUES (5,1,'Agent','Smith',1,'Jewelry Store','Cardiff');
+INSERT INTO cto VALUES (6,1,'Agent','Smith',2,'Bakery','Cardiff');
+INSERT INTO cto VALUES (7,1,'Agent','Smith',3,'Cafe','Cardiff');
+INSERT INTO cto VALUES (8,1,'Agent','Smith',4,'Restaurant','Cardiff');
+
+select * from cto;
+select * from cto where customer_name = 'Bakery';
+select * from cto where last_name = 'Anderson' and customer_id = 4;
+select min(customer_id) from cto;
+select max(customer_id) from cto;
+select * from cto;
+select * from cto where first_name = 'Agent' AND city = 'London';
